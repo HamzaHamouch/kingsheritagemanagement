@@ -375,3 +375,78 @@ input, textarea {
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    /* 1. HERO REFINEMENTS */
+    .image-stack {
+        height: 260px; /* Reduced height to keep it tight */
+        margin-top: 20px;
+        margin-bottom: 40px; /* Space between images and the headline */
+    }
+
+    /* 1. HERO REFINEMENTS - FLATTENING THE BOX */
+    .data-box {
+        top: 20px;
+        left: -5%;
+        width: 150px; /* Constrained width */
+        height: auto; 
+        max-height: 100px; /* FORCED height limit to prevent the "tall" look */
+        padding: 10px 12px; /* Reduced vertical padding */
+        border-radius: 18px; 
+        transform: rotate(-1.5deg);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centers text vertically within the shorter box */
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .data-box .stat {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+        line-height: 1; /* Prevents extra space above/below numbers */
+    }
+
+    .data-box p {
+        font-size: 0.6rem;
+        line-height: 1.1; /* Tightens the paragraph text */
+        margin: 0;
+    }
+
+    .img-main {
+        width: 80%;
+        margin-left: 10%; /* Centering the main image better */
+    }
+
+    .img-sub {
+        width: 50%;
+        bottom: -20px;
+        right: 0;
+    }
+
+    /* 2. CONTACT US CENTERING FIX */
+    .contact-card {
+        padding: 40px 20px;
+        text-align: center; /* Centers the main title */
+    }
+
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the block itself */
+        text-align: center; /* Centers the text inside */
+    }
+
+    .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the Phone and Email lines */
+        margin-bottom: 25px;
+    }
+
+    .contact-items p {
+        margin: 5px 0;
+        display: block;
+    }
+}
