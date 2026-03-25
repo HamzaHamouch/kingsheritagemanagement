@@ -377,71 +377,81 @@ input, textarea {
 }
 
 @media (max-width: 768px) {
-    /* 1. HERO REFINEMENTS */
-    .image-stack {
-        height: 260px; /* Reduced height to keep it tight */
-        margin-top: 20px;
-        margin-bottom: 40px; /* Space between images and the headline */
+    /* --- 1. HERO SECTION REFINEMENTS --- */
+    
+    /* ADD THIS: This controls the space between the image block and text block */
+    .hero-container {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px; /* Reduced gap to pull text up */
+        text-align: center;
     }
 
-    /* 1. HERO REFINEMENTS - FLATTENING THE BOX */
+    .image-stack {
+        height: 240px; /* Slightly shorter height helps the vertical flow */
+        margin-top: 20px;
+        margin-bottom: 0; /* CHANGED: Set to 0 to remove the big white gap */
+        position: relative;
+    }
+
+    /* THE NAVY BOX (FLATTENED) */
     .data-box {
         top: 20px;
         left: -5%;
-        width: 150px; /* Constrained width */
+        width: 150px; 
         height: auto; 
-        max-height: 100px; /* FORCED height limit to prevent the "tall" look */
-        padding: 10px 12px; /* Reduced vertical padding */
+        max-height: 100px; 
+        padding: 10px 12px; 
         border-radius: 18px; 
         transform: rotate(-1.5deg);
         z-index: 10;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centers text vertically within the shorter box */
+        justify-content: center;
         box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
     }
 
     .data-box .stat {
         font-size: 1.2rem;
         margin-bottom: 2px;
-        line-height: 1; /* Prevents extra space above/below numbers */
+        line-height: 1; 
     }
 
     .data-box p {
         font-size: 0.6rem;
-        line-height: 1.1; /* Tightens the paragraph text */
+        line-height: 1.1;
         margin: 0;
     }
 
     .img-main {
         width: 80%;
-        margin-left: 10%; /* Centering the main image better */
+        margin-left: 10%; 
     }
 
     .img-sub {
         width: 50%;
-        bottom: -20px;
+        bottom: -15px; /* Tucked in slightly more */
         right: 0;
     }
 
-    /* 2. CONTACT US CENTERING FIX */
+    /* --- 2. CONTACT US CENTERING FIX --- */
     .contact-card {
         padding: 40px 20px;
-        text-align: center; /* Centers the main title */
+        text-align: center; 
     }
 
     .contact-content {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers the block itself */
-        text-align: center; /* Centers the text inside */
+        align-items: center; 
+        text-align: center; 
     }
 
     .contact-items {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers the Phone and Email lines */
+        align-items: center; 
         margin-bottom: 25px;
     }
 
