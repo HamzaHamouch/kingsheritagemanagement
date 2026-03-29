@@ -126,12 +126,15 @@
                             <p><strong>Email:</strong> info@kingsheritagemanagement.com</p>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="contact-form">
                         <div class="form-row">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Business Email" required>
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="_replyto" placeholder="Business Email" required>
                         </div>
-                        <textarea placeholder="Service Requirements" rows="4"></textarea>
+                        <textarea name="message" placeholder="Service Requirements" rows="4" required></textarea>
+                        
+                        <input type="hidden" name="_subject" value="New Inquiry from Kings Heritage Website">
+                        
                         <button type="submit" class="btn-gold-pill-full">Submit Inquiry</button>
                     </form>
                 </div>
